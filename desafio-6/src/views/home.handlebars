@@ -1,0 +1,81 @@
+<main>
+	<div class="appContainer">
+		<form id="form">
+			<h2>Agregá un producto:</h2>
+			<label for="">
+				Nombre
+				<input
+					id="productNameInput"
+					type="text"
+					name="nombre"
+					placeholder="Ingrese el nombre del producto"
+				/>
+			</label>
+			<label for="">
+				Precio
+				<input
+					id="productPriceInput"
+					type="text"
+					name="precio"
+					placeholder="Ingrese el precio del producto"
+				/>
+			</label>
+
+			<label for="">
+				Thumbnail
+				<input
+					id="productThumbnailInput"
+					type="text"
+					name="thumbnail"
+					placeholder="Ingrese el link de la imagen"
+				/>
+			</label>
+
+			<button
+				type="submit
+			"
+			>
+				Agregar producto
+			</button>
+		</form>
+
+		<div class="chatFormContainer">
+			<h2>Envia un mensaje:</h2>
+			<form id="chatForm">
+				<input
+					type="email"
+					required
+					id="inputChatEmail"
+					placeholder="Ingrese su email"
+				/>
+				<hr />
+
+				<h3>Central de mensajes:</h3>
+				<div id="mensajes">
+
+				</div>
+
+				<hr />
+				<input
+					type="text"
+					id="inputChatText"
+					placeholder="Ingrese su menasje"
+				/>
+				<button>Enviar Mensaje</button>
+			</form>
+		</div>
+
+		<div class="productsContainer">
+			<div id="productos">
+				<span class="productTitle pos1">Nombre</span>
+				<span class="productTitle pos2">Precio</span>
+				<span class="productTitle pos3">Foto</span>
+			</div>
+			<div id="productsContainer">
+
+			</div>
+		</div>
+
+	</div>
+
+</main>
