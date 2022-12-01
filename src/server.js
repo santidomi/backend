@@ -4,6 +4,7 @@ const { Server } = require("socket.io");
 const app = express();
 const path = require("path");
 const Contenedor = require("./clase-contenedor/clase");
+const { measureMemory } = require("vm");
 
 const productContainer = new Contenedor();
 // APP USES
@@ -21,9 +22,11 @@ app.set("views", viewsFolder);
 // Que motor de plantillas voy a utilizar
 app.set("view engine", "handlebars");
 
-const server = app.listen(8080, () =>
-	console.log("Server listening on port 8080")
-);
+const server = app.listen(8080, () => {
+	console.log("Server listening on port 8080");
+	productContainer.getProducts();
+	productContainer.setMessages();
+});
 
 // Creación servidor websocker
 const io = new Server(server); // Conectamos el websocket con el servidor principal de Express.
@@ -33,7 +36,6 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-
 	console.log("Nuevo cliente conectado");
 	socket.emit("productos", productContainer.productos);
 	socket.emit("messages", productContainer.messages);
@@ -41,7 +43,10 @@ io.on("connection", (socket) => {
 	socket.on("newProduct", (data) => {
 		const message = productContainer.addProduct(data);
 		console.log(message);
-		io.sockets.emit("productos", productContainer.productos);
+		productContainer.getProducts();
+		setTimeout(() => {
+			io.sockets.emit("productos", productContainer.productos);
+		}, 1000);
 	});
 
 	socket.on("newMessage", (data) => {

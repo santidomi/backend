@@ -11,8 +11,8 @@ const addProduct = (e) => {
 	e.preventDefault();
 	const product = {
 		name: productNameInput.value,
-		price: productPriceInput.value,
 		thumbnail: productThumbnailInput.value,
+		price: productPriceInput.value,
 	};
 	socketClient.emit("newProduct", product);
 };

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "author": "josesa@gmail.com",
+    "date": "10/11/2022, 20:50:01",
+    "text": "Hola tade decime"
+  },
+  {
+    "id": 2,
+    "author": "tade@gmail.com",
+    "date": "10/11/2022, 20:50:16",
+    "text": "voy a agregar el producto CocaCola"
+  },
+  {
+    "id": 3,
+    "author": "tade@gmail.com",
+    "date": "10/11/2022, 20:56:02",
+    "text": "buenas"
+  },
+  {
+    "id": 4,
+    "author": "tade@gmail.com",
+    "date": "10/11/2022, 21:05:44",
+    "text": "Buenas"
+  },
+  {
+    "id": 5,
+    "author": "tade@gmail.com",
+    "date": "24/11/2022, 12:27:18",
+    "text": "Buenas"
+  },
+  {
+    "author": "tade@gmail.com",
+    "date": "24/11/2022, 21:17:40",
+    "text": "asd"
+  }
+]
